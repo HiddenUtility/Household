@@ -6,10 +6,11 @@ Created on Wed Sep 27 05:41:38 2023
 """
 
 from lib.ja_reader import JAReader
-from lib.ja_reader import JAReader
-from lib.ja_reader import JAReader
-from lib.ja_reader import JAReader
-from lib.ja_reader import JAReader
+from lib.rakuten_reader import RakutenReader
+from lib.ufj_reader import UFJReader
+from lib.epos_reader import EposReader
+from lib.reading_data import ReadingDatas
+
 from pathlib import Path
 
 if __name__ == '__main__':
