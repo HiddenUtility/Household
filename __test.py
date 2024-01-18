@@ -5,11 +5,11 @@ Created on Wed Sep 27 05:41:38 2023
 @author: iwill
 """
 
-from lib.ja_reader import JAReader
-from lib.rakuten_reader import RakutenReader
-from lib.ufj_reader import UFJReader
-from lib.epos_reader import EposReader
-from lib.reading_data import ReadingDatas
+from.srcja_reader import JAReader
+from.srcrakuten_reader import RakutenReader
+from.srcufj_reader import UFJReader
+from.srcepos_reader import EposReader
+from.srcreading_data import ReadingDatas
 
 from pathlib import Path
 

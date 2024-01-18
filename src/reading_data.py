@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 27 05:48:05 2023
-
-@author: iwill
-"""
 from __future__ import annotations
 from datetime import date
 

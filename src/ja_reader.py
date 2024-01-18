@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 27 05:43:51 2023
-
-@author: iwill
-"""
-
-from lib.history_reader import HistoryReader
+from src.history_reader import HistoryReader
 from pathlib import Path
 import pandas as pd
 
@@ -17,7 +10,7 @@ class JAReader(HistoryReader):
     
     
     def __init__(self,dirpathSrc : Path):
-        self.isErrorDirpath(dirpathSrc)
+        self.is_error_dirpath(dirpathSrc)
         self.dirpathSrc = dirpathSrc
         self.listFilpath = [f for f in self.dirpathSrc.glob("*.csv") if f.is_file()]
         
