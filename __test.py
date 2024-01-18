@@ -1,30 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 27 05:41:38 2023
 
-@author: iwill
-"""
-
-from.srcja_reader import JAReader
-from.srcrakuten_reader import RakutenReader
-from.srcufj_reader import UFJReader
-from.srcepos_reader import EposReader
-from.srcreading_data import ReadingDatas
+from src.ja_reader import JAReader
+from src.rakuten_reader import RakutenReader
+from src.ufj_reader import UFJReader
+from src.epos_reader import EposReader
+from src.reading_data import ReadingDatas
 
 from pathlib import Path
 
 if __name__ == '__main__':
     
     pass
-    
-    #dirpathSrc = Path(r"C:\Users\nanik\OneDrive\物置\02_家計\01_家計簿")
-    #userNames = ["Hiroki","Haruna"]
-    #HistoryReader = HistoryReader(dirpathSrc,userNames)
-    
-    #src = HistoryReader.dirpathSrc.joinpath(userNames[1],HistoryReader.JA_CARD)
-    #src = Path.cwd()
-    #ja = JAReader(src)
-    
-    #f = ja.listFilpath[0]
-    
-    #df = ja._read_csv(f)

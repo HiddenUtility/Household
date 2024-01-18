@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Feb 11 11:47:25 2023
-
-@author: uh
-"""
 
 
 import sys
