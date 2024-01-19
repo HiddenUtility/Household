@@ -7,6 +7,8 @@ from src.reading_data import ReadingDatas
 
 from pathlib import Path
 
+from config.making_direcotry import MakingDirecotry
+
 if __name__ == '__main__':
     
-    pass
+    MakingDirecotry().run()
