@@ -1,4 +1,4 @@
-from src.history_reader import HistoryReader
+from reader.history_reader import HistoryReader
 from pathlib import Path
 import pandas as pd
 

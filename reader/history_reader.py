@@ -1,4 +1,21 @@
+
 from abc import ABC, abstractmethod
-class Reader(ABC):
+class HistoryReader(ABC):
     @abstractmethod
     def run(self, other: object) -> None:...
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    
