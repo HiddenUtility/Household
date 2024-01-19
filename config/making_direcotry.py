@@ -1,15 +1,7 @@
-from enum import Enum, auto
 from pathlib import Path
-
-class DataDirecotryNames(Enum):
-    EPOS_CARD = auto()
-    JA_CARD = auto()
-    RAKUTEN_BANK = auto()
-    RAKUTEN_CRAD = auto()
-    RAKUTEN_FINANCE = auto()
-    UFJ_BANK = auto()
-    TOYOTA_CARD = auto()
-
+from config.finace_names import FainanceNames
+from config.bank_names import BankNames
+from config.card_names import CardNames
 
 class MakingDirecotry:
     def __init__(self) -> None:
@@ -20,7 +12,9 @@ class MakingDirecotry:
             path.mkdir()
 
     def run(self):
-        dirnames = [d.name for d in DataDirecotryNames]
+        dirnames = [d.name for d in BankNames]
+        dirnames += [d.name for d in CardNames]
+        dirnames += [d.name for d in FainanceNames]
         dst = Path("./data")
         self.__mkdir(dst)
         [self.__mkdir(dst.joinpath(name)) for name in dirnames]
