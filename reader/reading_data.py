@@ -10,12 +10,12 @@ class ReadingDatas:
     __name : str
 
     def __init__(self,
-                 datetime_ : datetime,
-                 user : str,
-                 imcome : int,
-                 expenses : int,
-                 itme : str,
-                 name : str
+                 datetime_ : datetime = datetime(2000,1,1),
+                 user : str = "nodata",
+                 imcome : int = 0,
+                 expenses : int = 0,
+                 itme : str = "nodata",
+                 name : str = "nodata",
                  ):
         self.__datetime = datetime_
         self.__user = user
@@ -38,6 +38,16 @@ class ReadingDatas:
     def __ne__(self,other : ReadingDatas):
         return not self.__eq__(other)
     
+    def __str__(self) -> str:
+        return f"""
+"date" : "{self.__datetime}"
+"user" : "{self.__user}"
+"imcom" : "{self.__imcome}"
+"expenses" : "{self.__expenses}"
+"item" : "{self.__itme}"
+"name" : "{self.__name}"
+"""
+
 
     @property
     def datetime(self) -> datetime:
