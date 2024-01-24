@@ -13,4 +13,8 @@ if __name__ == '__main__':
     
     MakingDirecotry().run()
 
-    RakutenReader().load()
+    datas : list[ReadingDatas] = []
+    datas += RakutenReader().load()
+
+
+    [print(d) for d in datas]
