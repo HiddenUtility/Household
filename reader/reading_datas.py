@@ -1,28 +1,29 @@
 from __future__ import annotations
 from datetime import datetime
 
+
 class ReadingDatas:
     __datetime : datetime
     __user : str
     __imcome : int
     __expenses : int
-    __itme : str
-    __name : str
+    __itme_name : str
+    __read_src_type : str
 
     def __init__(self,
                  datetime_ : datetime = datetime(2000,1,1),
                  user : str = "nodata",
+                 itme_name : str = "nodata",
+                 read_src_type : str = "nodata",
                  imcome : int = 0,
                  expenses : int = 0,
-                 itme : str = "nodata",
-                 name : str = "nodata",
                  ):
         self.__datetime = datetime_
         self.__user = user
         self.__imcome = imcome
         self.__expenses = expenses
-        self.__itme = itme
-        self.__name = name
+        self.__itme_name = itme_name
+        self.__read_src_type = read_src_type
 
         
     def __eq__(self,other : ReadingDatas):
@@ -31,8 +32,8 @@ class ReadingDatas:
         if self.__user != other.user:return False
         if self.__imcome != other.imcome:return False
         if self.__expenses != other.expenses:return False
-        if self.__itme != other.itme:return False
-        if self.__name != other.name:return False
+        if self.__itme_name != other.itme:return False
+        if self.__read_src_type != other.name:return False
         return True
         
     def __ne__(self,other : ReadingDatas):
@@ -44,8 +45,8 @@ class ReadingDatas:
 "user" : "{self.__user}"
 "imcom" : "{self.__imcome}"
 "expenses" : "{self.__expenses}"
-"item" : "{self.__itme}"
-"name" : "{self.__name}"
+"item" : "{self.__itme_name}"
+"name" : "{self.__read_src_type}"
 """
 
 
@@ -67,8 +68,8 @@ class ReadingDatas:
     
     @property
     def itme(self) -> datetime:
-        return self.__itme
+        return self.__itme_name
     
     @property
     def name(self) -> str:
-        return self.__name
+        return self.__read_src_type

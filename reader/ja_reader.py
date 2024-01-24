@@ -21,5 +21,5 @@ class JAReader(HistoryReader):
         
         return df
         
-    def run():
+    def load():
         return

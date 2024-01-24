@@ -1,8 +1,10 @@
 
 from abc import ABC, abstractmethod
+from reader.reading_datas import ReadingDatas
+
 class HistoryReader(ABC):
     @abstractmethod
-    def run(self, other: object) -> None:...
+    def load(self) -> list[ReadingDatas]:...
 
 
 
