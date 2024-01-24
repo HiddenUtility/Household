@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep  1 16:20:30 2023
-
-@author: nanik
-"""
 
 from pathlib import Path
 from glob import glob
