@@ -1,6 +1,6 @@
 from __future__ import annotations
 from datetime import datetime
-
+from unicodedata import normalize
 
 class ReadingDatas:
     __datetime : datetime
@@ -22,7 +22,7 @@ class ReadingDatas:
         self.__filename = filename
         self.__imcome = imcome
         self.__expenses = expenses
-        self.__itme_name = itme_name
+        self.__itme_name = normalize("NFKC",itme_name)
         self.__read_src_type = read_src_type
 
         
@@ -55,7 +55,7 @@ class ReadingDatas:
         return self.__datetime
     
     @property
-    def user(self) -> str:
+    def filename(self) -> str:
         return self.__filename
 
     @property

@@ -1,5 +1,5 @@
-from reader.rakuten_card_file_columns import RakutenCardFileColumns
-from reader.rakuten_card_file_path import RakutenCardFilePath
+from reader.rakuten.rakuten_card_file_columns import RakutenCardFileColumns
+from reader.rakuten.rakuten_card_file_path import RakutenCardFilePath
 from reader.reading_datas import ReadingDatas
 from pandas import DataFrame, read_csv
 from datetime import datetime

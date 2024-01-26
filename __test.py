@@ -1,8 +1,8 @@
 
 from reader.ja_reader import JAReader
-from reader.rakuten_reader import RakutenReader
+from reader.rakuten.rakuten_reader import RakutenReader
 from reader.ufj_reader import UFJReader
-from reader.epos_reader import EposReader
+from reader.epos.epos_reader import EposReader
 from reader.reading_datas import ReadingDatas
 
 from pathlib import Path
@@ -14,7 +14,8 @@ if __name__ == '__main__':
     MakingDirecotry().run()
 
     datas : list[ReadingDatas] = []
-    datas += RakutenReader().load()
+    # datas = RakutenReader().load()
+    [print(d) for d in datas]
 
-
+    datas = EposReader().load()
     [print(d) for d in datas]
