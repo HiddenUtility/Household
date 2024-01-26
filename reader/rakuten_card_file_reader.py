@@ -9,6 +9,7 @@ class RakutenCardFileReader:
     __df : DataFrame
     def __init__(self, path: RakutenCardFilePath) -> None:
         if not isinstance(path, RakutenCardFilePath): raise TypeError()
+        self.__filename = path.name
         self.__df = read_csv(path.to_path(), 
                       encoding="utf-8", 
                       engine="python", 
@@ -17,6 +18,7 @@ class RakutenCardFileReader:
     def __create_data(self, row: dict):
         return ReadingDatas(
             datetime_=datetime.strptime(row[RakutenCardFileColumns.DATE.value], r"%Y/%m/%d"),
+            filename=self.__filename,
             expenses=int(row[RakutenCardFileColumns.PAYMENT.value]),
             itme_name=row[RakutenCardFileColumns.SHOP_NAME.value],
             read_src_type=CardNames.RAKUTEN_CARD.name,

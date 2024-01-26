@@ -4,7 +4,7 @@ from datetime import datetime
 
 class ReadingDatas:
     __datetime : datetime
-    __user : str
+    __filename : str
     __imcome : int
     __expenses : int
     __itme_name : str
@@ -12,14 +12,14 @@ class ReadingDatas:
 
     def __init__(self,
                  datetime_ : datetime = datetime(2000,1,1),
-                 user : str = "nodata",
+                 filename : str = "nodata",
                  itme_name : str = "nodata",
                  read_src_type : str = "nodata",
                  imcome : int = 0,
                  expenses : int = 0,
                  ):
         self.__datetime = datetime_
-        self.__user = user
+        self.__filename = filename
         self.__imcome = imcome
         self.__expenses = expenses
         self.__itme_name = itme_name
@@ -29,7 +29,7 @@ class ReadingDatas:
     def __eq__(self,other : ReadingDatas):
         if other is None or isinstance(other, ReadingDatas)==False:return False
         if self.__datetime != other.datetime:return False
-        if self.__user != other.user:return False
+        if self.__filename != other.user:return False
         if self.__imcome != other.imcome:return False
         if self.__expenses != other.expenses:return False
         if self.__itme_name != other.itme:return False
@@ -42,7 +42,7 @@ class ReadingDatas:
     def __str__(self) -> str:
         return f"""
 "date" : "{self.__datetime}"
-"user" : "{self.__user}"
+"filename" : "{self.__filename}"
 "imcom" : "{self.__imcome}"
 "expenses" : "{self.__expenses}"
 "item" : "{self.__itme_name}"
@@ -56,7 +56,7 @@ class ReadingDatas:
     
     @property
     def user(self) -> str:
-        return self.__user
+        return self.__filename
 
     @property
     def imcome(self) -> datetime:
